@@ -1,0 +1,34 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hola, como estas?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Te puedo ayudar en algo?"
+
+  utter_happy:
+  - text: "GeniaL!"
+
+  utter_goodbye:
+  - text: "Adios"
+
+  utter_iamabot:
+  - text: "Soy in bot hecho por rasa"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
