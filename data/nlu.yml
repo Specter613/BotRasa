@@ -1,91 +1,89 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: Saludar
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hola
+    - Que tal
+    - Hola, que tal?
+    - Buenos dias
+    - Buenas tardes
+    - Buenas noches
+    - Necesito
+    - Puedes ayudarme?
+    - Hey
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
 
-- intent: affirm
+- intent: Despedida
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Adios
+    - Gracias por la ayuda
+    - Gracias por todo, hasta la próxima
+    - Nos vemos
+    - Nos vemos luego
+    - Hasta luego
+    - Gracias bot
+    - Gracias por la ayuda hasta luego!
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
 
-- intent: mood_great
+- intent: Afirmacion
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Si
+    - Exacto
+    - Eso es
+    - Por supuesto que si
+    - Suena bien
+    - Correcto
+    - Es Correcto
+    - Okay
+    - Si claro
+    - Es correcto
+    - Eso mismo
 
-- intent: mood_unhappy
+- intent: Negacion
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - No
+    - Eso no
+    - Nunca
+    - No creo que sea eso
+    - No me agrada
+    - Claro que no
+    - En realidad no
+    - Por supuesto que no
+    - Creo que no
+    - No gracias
 
-- intent: bot_challenge
+- intent: modo_feliz
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Perfecto
+    - Genial
+    - Sorprendente
+    - Muy bien
+    - Espectacular
+    - Me siento bien
+    - Me siento muy bien
+    - Estoy increible
+    - Nada mal
+    - Super bien
+    - Extremadamente bien
+    - Demaciado perfecto
+    - Dermaciado bien
+    - Es perfecto
+
+- intent: modo_Descontento
+  examples: |
+    - No me ayuda
+    - Gracias por nada
+    - No muy bien
+    - No me estas ayudando mucho
+    - Triste
+    - Esa informacion esta mal
+    - Eso no es lo que busco
+    - Me estas mandando mal la informacion
+
+- intent: Eres_Bot
+  examples: |
+    - Eres un bot?
+    - Eres humano?
+    - Estoy hablando con un bot?
+    - Estoy hablando con un humano?

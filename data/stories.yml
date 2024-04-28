@@ -4,27 +4,27 @@ stories:
 
 - story: happy path
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: Saludar
+  - action: utter_Saludo
+  - intent: modo_feliz
+  - action: utter_Feliz
 
 - story: sad path 1
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
+  - intent: modo_feliz
+  - action: utter_Feliz
+  - intent: modo_descontento
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_Ofrecer_Ayuda
+  - intent: Afirmacion
+  - action: utter_Feliz
 
 - story: sad path 2
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
+  - intent: Saludar
+  - action: utter_Saludo
+  - intent: modo_descontento
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_Ofrecer_Ayuda
+  - intent: Negacion
+  - action: utter_Despedida

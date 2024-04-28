@@ -1,32 +1,47 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - Saludar
+  - Despedida
+  - Afirmacion
+  - Negacion
+  - modo_feliz
+  - modo_descontento
+  - Eres_Bot
 
 responses:
-  utter_greet:
+  utter_Saludo:
   - text: "Hola, como estas?"
+  - text: "Hola, como va todo?"
+  - text: "Hola, en que puedo ayudarte?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
+  utter_Ofrecer_Ayuda:
   - text: "Te puedo ayudar en algo?"
+  - text: "Dime en que puedo ayudarte"
 
-  utter_happy:
-  - text: "GeniaL!"
+  utter_Feliz:
+  - text: "Genial!"
+  - text: "Yo exelente"
+  - text: "Yo muy bien"
+  - text: "Soy un bot dudo que pueda estar mal"
+  - text: "Exelente, gracias"
 
-  utter_goodbye:
+
+  utter_Despedida:
   - text: "Adios"
+  - text: "Un placer ayudarte"
+  - text: "Regrasa pronto"
+  - text: "Si tienes dudas escribeme"
+  - text: "Encantado de haberte ayudado"
+  - text: "Vuelve pronto"
+  - text: "Hata luego, Cuidate!"
 
-  utter_iamabot:
+
+  utter_SoyunBot:
   - text: "Soy in bot hecho por rasa"
 
 session_config:

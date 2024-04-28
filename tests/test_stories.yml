@@ -5,87 +5,87 @@ stories:
 - story: happy path 1
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      Hola que tal!
+    intent: Saludar
+  - action: utter_Saludo
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      Increible
+    intent: modo_feliz
+  - action: utter_Feliz
 
 - story: happy path 2
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      Hola 
+    intent: Saludar
+  - action: utter_Saludo
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      Increible
+    intent: modo_feliz
+  - action: utter_Feliz
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      Adios
+    intent: Despedida
+  - action: utter_Despedida
 
 - story: sad path 1
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      hey
+    intent: Saludo
+  - action: utter_Saludo
   - user: |
-      not good
-    intent: mood_unhappy
+      No muy bien
+    intent: modo_descontento
   - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_Ofrecer_Ayuda
   - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+      Si
+    intent: Afirmacion
+  - action: utter_Feliz
 
 - story: sad path 2
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      Buenos dias
+    intent: Saludar
+  - action: utter_Saludo
   - user: |
-      not good
-    intent: mood_unhappy
+      triste
+    intent: mood_descontento
   - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_Ofrecer_Ayuda
   - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+      No
+    intent: Negacion
+  - action: utter_Despedida
 
 - story: sad path 3
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
+      Buenas Tardes
+    intent: Saludar
+  - action: utter_Saludo
   - user: |
-      very terrible
-    intent: mood_unhappy
+      No me estas ayudando
+    intent: mood_descontento
   - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_Ofrecer_Ayuda
   - user: |
       no
-    intent: deny
-  - action: utter_goodbye
+    intent: Negacion
+  - action: utter_Despedida
 
 - story: say goodbye
   steps:
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      Adios
+    intent: Despedida
+  - action: utter_Despedida
 
 - story: bot challenge
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      Eres un bot?
+    intent: Eres_Bot
+  - action: utter_SoyunBot
