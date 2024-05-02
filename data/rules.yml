@@ -7,7 +7,7 @@ rules:
   - intent: Despedida
   - action: utter_Despedida
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Di 'Soy un bot' cuando te pregunten acerca de lo que eres
   steps:
   - intent: bot_challenge
-  - action: utter_SoyunBot
+  - action: utter_iamabot

@@ -6,25 +6,25 @@ stories:
   steps:
   - intent: Saludar
   - action: utter_Saludo
-  - intent: modo_feliz
-  - action: utter_Feliz
+  - intent: modo_Acertivo
+  - action: utter_Contento
 
 - story: sad path 1
   steps:
-  - intent: modo_feliz
-  - action: utter_Feliz
-  - intent: modo_descontento
-  - action: utter_cheer_up
+  - intent: modo_Acertivo
+  - action: utter_Contento
+  - intent: modo_No_Acertivo
+  - action: utter_Funcion_Bot
   - action: utter_Ofrecer_Ayuda
   - intent: Afirmacion
-  - action: utter_Feliz
+  - action: utter_Contento
 
 - story: sad path 2
   steps:
   - intent: Saludar
   - action: utter_Saludo
-  - intent: modo_descontento
-  - action: utter_cheer_up
+  - intent: modo_No_Acertivo
+  - action: utter_Funcion_Bot
   - action: utter_Ofrecer_Ayuda
   - intent: Negacion
   - action: utter_Despedida

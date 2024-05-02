@@ -2,18 +2,19 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: Conversacion acertiva
   steps:
   - user: |
-      Hola que tal!
+      Hola que tal
     intent: Saludar
   - action: utter_Saludo
+  - action: utter_Funcion_Bot
   - user: |
       Increible
-    intent: modo_feliz
-  - action: utter_Feliz
+    intent: modo_Acertivo
+  - action: utter_Contento
 
-- story: happy path 2
+- story: Conversacion acertiva 2
   steps:
   - user: |
       Hola 
@@ -21,14 +22,14 @@ stories:
   - action: utter_Saludo
   - user: |
       Increible
-    intent: modo_feliz
-  - action: utter_Feliz
+    intent: modo_Acetivo
+  - action: utter_Contento
   - user: |
       Adios
     intent: Despedida
   - action: utter_Despedida
 
-- story: sad path 1
+- story: Conversacion no acertiva
   steps:
   - user: |
       hey
@@ -37,55 +38,55 @@ stories:
   - user: |
       No muy bien
     intent: modo_descontento
-  - action: utter_cheer_up
+  - action: utter_Funcion_Bot
   - action: utter_Ofrecer_Ayuda
   - user: |
       Si
     intent: Afirmacion
-  - action: utter_Feliz
+  - action: utter_Contento
 
-- story: sad path 2
-  steps:
-  - user: |
-      Buenos dias
-    intent: Saludar
-  - action: utter_Saludo
-  - user: |
-      triste
-    intent: mood_descontento
-  - action: utter_cheer_up
-  - action: utter_Ofrecer_Ayuda
-  - user: |
-      No
-    intent: Negacion
-  - action: utter_Despedida
+# - story: sad path 2
+#   steps:
+#   - user: |
+#       Buenos dias
+#     intent: Saludar
+#   - action: utter_Saludo
+#   - user: |
+#       triste
+#     intent: mood_descontento
+#   - action: utter_Funcion_Bot
+#   - action: utter_Ofrecer_Ayuda
+#   - user: |
+#       No
+#     intent: Negacion
+#   - action: utter_Despedida
 
-- story: sad path 3
-  steps:
-  - user: |
-      Buenas Tardes
-    intent: Saludar
-  - action: utter_Saludo
-  - user: |
-      No me estas ayudando
-    intent: mood_descontento
-  - action: utter_cheer_up
-  - action: utter_Ofrecer_Ayuda
-  - user: |
-      no
-    intent: Negacion
-  - action: utter_Despedida
+# - story: sad path 3
+#   steps:
+#   - user: |
+#       Buenas Tardes
+#     intent: Saludar
+#   - action: utter_Saludo
+#   - user: |
+#       No me estas ayudando
+#     intent: mood_descontento
+#   - action: utter_cheer_up
+#   - action: utter_Ofrecer_Ayuda
+#   - user: |
+#       no
+#     intent: Negacion
+#   - action: utter_Despedida
 
-- story: say goodbye
-  steps:
-  - user: |
-      Adios
-    intent: Despedida
-  - action: utter_Despedida
+# - story: say goodbye
+#   steps:
+#   - user: |
+#       Adios
+#     intent: Despedida
+#   - action: utter_Despedida
 
-- story: bot challenge
-  steps:
-  - user: |
-      Eres un bot?
-    intent: Eres_Bot
-  - action: utter_SoyunBot
+# - story: bot challenge
+#   steps:
+#   - user: |
+#       Eres un bot?
+#     intent: Eres_Bot
+#   - action: utter_SoyunBot

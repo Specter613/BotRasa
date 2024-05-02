@@ -12,6 +12,7 @@ nlu:
     - Necesito
     - Puedes ayudarme?
     - Hey
+    - Hola que tal
 
 
 - intent: Despedida
@@ -24,6 +25,7 @@ nlu:
     - Hasta luego
     - Gracias bot
     - Gracias por la ayuda hasta luego!
+    - Gracias
 
 
 - intent: Afirmacion
@@ -39,6 +41,7 @@ nlu:
     - Si claro
     - Es correcto
     - Eso mismo
+    - Por favor
 
 - intent: Negacion
   examples: |
@@ -52,34 +55,31 @@ nlu:
     - Por supuesto que no
     - Creo que no
     - No gracias
+    - No es lo que busco
 
-- intent: modo_feliz
+- intent: modo_Acertivo
   examples: |
     - Perfecto
     - Genial
     - Sorprendente
     - Muy bien
-    - Espectacular
-    - Me siento bien
-    - Me siento muy bien
-    - Estoy increible
-    - Nada mal
-    - Super bien
-    - Extremadamente bien
-    - Demaciado perfecto
-    - Dermaciado bien
-    - Es perfecto
+    - Eso es lo que buscaba
+    - Justo lo que necesito
+    - Me agrada
+    - Exelente
+    - Super
+    - Cool
 
-- intent: modo_Descontento
+- intent: modo_No_Acertivo
   examples: |
     - No me ayuda
     - Gracias por nada
-    - No muy bien
     - No me estas ayudando mucho
-    - Triste
     - Esa informacion esta mal
     - Eso no es lo que busco
     - Me estas mandando mal la informacion
+    - No tienes algo mas?
+    - Eso es todo?
 
 - intent: Eres_Bot
   examples: |
@@ -87,3 +87,5 @@ nlu:
     - Eres humano?
     - Estoy hablando con un bot?
     - Estoy hablando con un humano?
+    - Que eres?
+    - Quien eres?

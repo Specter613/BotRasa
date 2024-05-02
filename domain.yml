@@ -5,8 +5,8 @@ intents:
   - Despedida
   - Afirmacion
   - Negacion
-  - modo_feliz
-  - modo_descontento
+  - modo_Acertivo
+  - modo_No_Acertivo
   - Eres_Bot
 
 responses:
@@ -15,21 +15,41 @@ responses:
   - text: "Hola, como va todo?"
   - text: "Hola, en que puedo ayudarte?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter _Peticion:
+  - text: "Claro enseguida"
+  - text: "Dame un momento"
+  - text: "Permiteme buscar algo sobre **Poner etiqueta**"
+  - text: "Buscando informacion sobre ** Poner etiqueta**"
+
+  utter_Funcion_Bot:
+  - text: "Soy una Sistema diseñado como apoyo para documentarte
+          acerca de la Inteligencia artificial, Puedo darte conceptos, 
+          Link o videos de utilidad sobre este tema"
 
   utter_Ofrecer_Ayuda:
   - text: "Te puedo ayudar en algo?"
   - text: "Dime en que puedo ayudarte"
+  - text: "En que puedo ayudarte?"
+  - text: "Puedo ayudarte en algo"
+  - text: "Necesitas algo?"
 
-  utter_Feliz:
+  utter_Contento:
   - text: "Genial!"
-  - text: "Yo exelente"
-  - text: "Yo muy bien"
-  - text: "Soy un bot dudo que pueda estar mal"
+  - text: "Me alegro que te sirva"
+  - text: "Me alegra saber eso"
+  - text: "Para eso estoy yo, me gusta ayudar"
   - text: "Exelente, gracias"
+  - text: "Eso es exelente"
+  - text: "Super!"
+  - text: "Grandioso"
 
+  utter_Descontento:
+  - text: "Lamento escuchar eso"
+  - text: "Entiendo"
+  - text: ":("
+  - text: "Siento escuchar eso mis creadores estaran al tanto"
+  - text: "Lo siento por eso"
+  - text: "Pido perdon :("
 
   utter_Despedida:
   - text: "Adios"
@@ -38,11 +58,11 @@ responses:
   - text: "Si tienes dudas escribeme"
   - text: "Encantado de haberte ayudado"
   - text: "Vuelve pronto"
-  - text: "Hata luego, Cuidate!"
+  - text: "Hasta luego, Cuidate!"
 
 
-  utter_SoyunBot:
-  - text: "Soy in bot hecho por rasa"
+  utter_iamabot:
+  - text: "Soy un bot hecho por rasa"
 
 session_config:
   session_expiration_time: 60
