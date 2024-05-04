@@ -8,6 +8,32 @@ intents:
   - modo_Acertivo
   - modo_No_Acertivo
   - Eres_Bot
+  - Solicitud
+
+## Variables para almacenar lo que el usuario va a pedir 
+entities:
+  - informacion
+  - menu
+## Acciones que se programaran en el archivo py para conectar a una base de datos
+actions: 
+  - Buscar
+  - Mandar_menu
+
+##Especificaciones para que el bot busque y se comunique con el servidos
+slots: 
+  informacion:
+   type: text
+   influence_conversartion: true
+   mappings:
+    - type: from_entity
+      entity: informacion
+  menu:
+   type: text
+   influence_conversartion: true
+   mappings:
+    - type: from_entity
+      entity: menu
+
 
 responses:
   utter_Saludo:
@@ -18,8 +44,8 @@ responses:
   utter _Peticion:
   - text: "Claro enseguida"
   - text: "Dame un momento"
-  - text: "Permiteme buscar algo sobre **Poner etiqueta**"
-  - text: "Buscando informacion sobre ** Poner etiqueta**"
+  - text: "Permiteme buscar"
+  - text: "Buscando informacion"
 
   utter_Funcion_Bot:
   - text: "Soy una Sistema diseñado como apoyo para documentarte
@@ -63,6 +89,9 @@ responses:
 
   utter_iamabot:
   - text: "Soy un bot hecho por rasa"
+
+  utter_default:
+  - text: Lo siento, no entendí lo que quisiste decir. ¿Podrías reformular tu pregunta?
 
 session_config:
   session_expiration_time: 60

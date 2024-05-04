@@ -89,3 +89,14 @@ nlu:
     - Estoy hablando con un humano?
     - Que eres?
     - Quien eres?
+
+- intent: Solicitud
+  examples: |
+    - [necesito](informacion)
+    - Quiero informacion sobre el tema de [tema](informacion)
+    - Necesito informacion sobre el tema de [tema](informacion)
+    - Que es [tema](informacion)
+    - Que es la [tema](informacion)
+    - Que es el [tema](informacion)
+    - Quiero que me digas que es [tema](informacion)
+

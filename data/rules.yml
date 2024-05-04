@@ -9,5 +9,10 @@ rules:
 
 - rule: Di 'Soy un bot' cuando te pregunten acerca de lo que eres
   steps:
-  - intent: bot_challenge
+  - intent: Eres_Bot
   - action: utter_iamabot
+
+- rule: informacion 
+  steps:
+  - intent: Solicitud
+  - action: Buscar

@@ -2,17 +2,23 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: Solicitud sin saludar
   steps:
-  - intent: Saludar
-  - action: utter_Saludo
+  - intent: Solicitud
+  - action: utter_Peticion
+    entities: 
+    - informacion: "Que es la inteligencia artificial"
   - intent: modo_Acertivo
   - action: utter_Contento
 
-- story: sad path 1
+- story: Solicitud con saludo
   steps:
-  - intent: modo_Acertivo
-  - action: utter_Contento
+  - intent: Saludar
+  - action: utter_Saludo
+  - intent: Solicitud
+  - action: utter_Peticion
+    entities: 
+    - informacion: "Que es la inteligencia artificial"
   - intent: modo_No_Acertivo
   - action: utter_Funcion_Bot
   - action: utter_Ofrecer_Ayuda
