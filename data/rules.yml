@@ -12,7 +12,12 @@ rules:
   - intent: Eres_Bot
   - action: utter_iamabot
 
-- rule: informacion 
+- rule: Buscarinformacion
+   steps:
+   - intent: Solicitud
+   - action: Buscar
+
+- rule: Di tu funcion
   steps:
-  - intent: Solicitud
-  - action: Buscar
+    - intent: tu_funcion
+    - action: utter_Funcion_Bot

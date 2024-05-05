@@ -13,6 +13,7 @@ nlu:
     - Puedes ayudarme?
     - Hey
     - Hola que tal
+    - Oye
 
 
 - intent: Despedida
@@ -25,7 +26,10 @@ nlu:
     - Hasta luego
     - Gracias bot
     - Gracias por la ayuda hasta luego!
-    - Gracias
+    - Gracias por todo
+    - Bye
+    - Hasta la próxima
+    - Chau
 
 
 - intent: Afirmacion
@@ -42,6 +46,7 @@ nlu:
     - Es correcto
     - Eso mismo
     - Por favor
+    - Afirmativo
 
 - intent: Negacion
   examples: |
@@ -56,6 +61,7 @@ nlu:
     - Creo que no
     - No gracias
     - No es lo que busco
+    - Negativo
 
 - intent: modo_Acertivo
   examples: |
@@ -80,6 +86,7 @@ nlu:
     - Me estas mandando mal la informacion
     - No tienes algo mas?
     - Eso es todo?
+    - No me sirve la informacion
 
 - intent: Eres_Bot
   examples: |
@@ -89,6 +96,7 @@ nlu:
     - Estoy hablando con un humano?
     - Que eres?
     - Quien eres?
+    - Eres un bot o un humano?
 
 - intent: Solicitud
   examples: |
@@ -99,4 +107,70 @@ nlu:
     - Que es la [tema](informacion)
     - Que es el [tema](informacion)
     - Quiero que me digas que es [tema](informacion)
+    - Sabes que es [tema](informacion)
+    - Conoces acerca de [tema](informacion) y mandame [masejemplos](imagenes)
+    - Concepto de [tema](informacion)
+    - Dame el concepto de [tema](informacion)
+  
+ - intent: Solicitud_img
+  examples: |
+    - Me puedes dar mas ejemplos de [tema](imagen)
+    - Me puedes dar mas informacion de [tema](imagen))
+    - Quiero saber mas acerca de [tema](imagen))
+    - Que mas me puedes decir de [tema](imagen))
+    - Puedes darmame mas (imagen)
+    - Que mas sabes de [tema](imagen))
+    - Cuentame un poco mas de (imagen)
 
+- intent: tu_funcion
+  examples:
+    - Para que eres?
+    - Para que sirves?
+    - Que es lo que haces?
+    - Como me puedes ayudar?
+    - Cual es tu funcion?
+    - De que me sirves?
+    - En que me puedes ayudar?
+    - para que funcionas?
+
+- intent: sobre_RNA
+  examples: |
+  - RNA
+  - Sobre Redes neuronales artificiales
+  - Sobre redes neuronales
+  - Sobre redes
+  - Platicame sobre redes neuronales
+  - rna
+  - me interesa sobre redes neuronales
+  - platicame sobre redes neuronales
+
+
+- intent: sobre_LD
+  - LD
+  - Sobre Logica difusa
+  - Sobre logica difusa
+  - Sobre Logica difusa
+  - Platicame logica difusa
+  - ld
+  - me interesa sobre logica difusa
+  - platicame sobre logica difusa
+
+
+ - intent: sobre_IA
+  examples: |
+    - Que me puedes hablar de la IA
+    - Que me puedes hablar de la ia
+    - Que es IA
+    - Que es ia
+    - Habalde de la IA
+    - Habalde de la ia
+    - Que sabes de la IA
+    - Que sabes de la ia
+    - Que sabes acerca de IA
+    - Que sabes acerca de la ia
+    - Inteligencia Artificial
+    - inteligencia artifical
+    - Que sabes acerca de Inteligencia Artificial
+    - Que sabes acerca de la inteligencia artificial
+    
+  

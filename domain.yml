@@ -9,30 +9,43 @@ intents:
   - modo_No_Acertivo
   - Eres_Bot
   - Solicitud
+  - Solicitud_img
+  - sobre_RNA
+  - sobre_Ld
+  - sobre_IA
 
 ## Variables para almacenar lo que el usuario va a pedir 
 entities:
   - informacion
-  - menu
+  - imagen
+
 ## Acciones que se programaran en el archivo py para conectar a una base de datos
 actions: 
   - Buscar
-  - Mandar_menu
+  - Buscar_img
 
 ##Especificaciones para que el bot busque y se comunique con el servidos
 slots: 
   informacion:
    type: text
-   influence_conversartion: true
+   influence_conversation: true
    mappings:
     - type: from_entity
       entity: informacion
-  menu:
+  informacion:
    type: text
-   influence_conversartion: true
+   influence_conversation: true
    mappings:
     - type: from_entity
-      entity: menu
+      entity: imagen
+
+slots: 
+  imagen:
+   type: text
+   influence_conversation: true
+   mappings:
+    - type: from_entity
+      entity: imagen
 
 
 responses:
@@ -93,6 +106,23 @@ responses:
   utter_default:
   - text: Lo siento, no entendí lo que quisiste decir. ¿Podrías reformular tu pregunta?
 
+  utter_menu:
+  - text: "Los principales temas que contiene mi base de datos son: "
+  
+  uttter_menu_RNA:
+  - text: "Te puedo ofrecer informacion sobre: "
+
+    
+  utter_menu_LD:
+  - text: "Te puedo hablar sobre: "
+  
+  utter_menu_IA:
+  - text: "De lo que te puedo hablar acerca de este tema es: \n"
+
+  utter_mas_ayuda:
+  - text: "Necesitas algo mas"
+  - text: "Puedo ayudarte con algo mas?"
+  - text: "algo mas en lo que pueda ayudar?"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

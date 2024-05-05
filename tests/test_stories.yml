@@ -2,7 +2,7 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: Conversacion acertiva
+- story: Usuario entra saluda y busca informacion
   steps:
   - user: |
       Hola que tal
@@ -10,40 +10,62 @@ stories:
   - action: utter_Saludo
   - action: utter_Funcion_Bot
   - user: |
-      Increible
+      Que es la [Logica difusa]{"entity": "informacion"}
+  - entities:
+        - informacion: "Logica difusa"
     intent: modo_Acertivo
   - action: utter_Contento
 
-- story: Conversacion acertiva 2
-  steps:
-  - user: |
-      Hola 
-    intent: Saludar
-  - action: utter_Saludo
-  - user: |
-      Increible
-    intent: modo_Acetivo
-  - action: utter_Contento
-  - user: |
-      Adios
-    intent: Despedida
-  - action: utter_Despedida
+# - story: Usuario pide informacion y no saluda
+#   steps:
+#   - user: |
+#       [Logica difusa]
+#     intent: Saludar
+#   - action: utter_Saludo
+#   - user: |
+#       Increible
+#     intent: modo_Acetivo
+#   - action: utter_Contento
+#   - user: |
+#       Adios
+#     intent: Despedida
+#   - action: utter_Despedida
 
-- story: Conversacion no acertiva
-  steps:
-  - user: |
-      hey
-    intent: Saludo
-  - action: utter_Saludo
-  - user: |
-      No muy bien
-    intent: modo_descontento
-  - action: utter_Funcion_Bot
-  - action: utter_Ofrecer_Ayuda
-  - user: |
-      Si
-    intent: Afirmacion
-  - action: utter_Contento
+# - story: Conversacion no acertiva
+#   steps:
+#   - user: |
+#       hey
+#     intent: Saludo
+#   - action: utter_Saludo
+#   - user: |
+#       No muy bien
+#     intent: modo_descontento
+#   - action: utter_Funcion_Bot
+#   - action: utter_Ofrecer_Ayuda
+#   - user: |
+#       Si
+#     intent: Afirmacion
+#   - action: utter_Contento
+#   - intent: Solicitud
+#   - action: utter_Peticion
+
+# - story: Conversacion acertiva
+#   steps:
+#   - user: |
+#       hey
+#     intent: Saludo
+#   - action: utter_Saludo
+#   - user: |
+#       Muy bien
+#     intent: modo_Acertivo
+#   - action: utter_Funcion_Bot
+#   - action: utter_Ofrecer_Ayuda
+#   - user: |
+#       Si
+#     intent: Afirmacion
+#   - action: utter_Contento
+#   - intent: Solicitud
+#   - action: utter_Peticion
 
 # - story: sad path 2
 #   steps:

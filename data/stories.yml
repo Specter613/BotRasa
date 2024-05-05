@@ -1,36 +1,200 @@
 version: "3.1"
 
 stories:
-
-- story: Solicitud sin saludar
+- story: Usuario no saluda y pide informacion pero no existe 1
   steps:
-  - intent: Solicitud
-  - action: utter_Peticion
-    entities: 
-    - informacion: "Que es la inteligencia artificial"
-  - intent: modo_Acertivo
-  - action: utter_Contento
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_RNA
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
 
-- story: Solicitud con saludo
+stories:
+- story: Usuario no saluda y pide informacion pero no existe 2
   steps:
-  - intent: Saludar
-  - action: utter_Saludo
-  - intent: Solicitud
-  - action: utter_Peticion
-    entities: 
-    - informacion: "Que es la inteligencia artificial"
-  - intent: modo_No_Acertivo
-  - action: utter_Funcion_Bot
-  - action: utter_Ofrecer_Ayuda
-  - intent: Afirmacion
-  - action: utter_Contento
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_LD
+      entities:
+        - buscarinformacion: "Tema Variable Linguistica"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
 
-- story: sad path 2
+stories:
+- story: Usuario no saluda y pide informacion pero no existe 3
   steps:
-  - intent: Saludar
-  - action: utter_Saludo
-  - intent: modo_No_Acertivo
-  - action: utter_Funcion_Bot
-  - action: utter_Ofrecer_Ayuda
-  - intent: Negacion
-  - action: utter_Despedida
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_IA
+      entities:
+        - buscarinformacion: "Tema sobre IA"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+
+stories:
+- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 1
+  steps:
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_IA
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: modo_Contento
+    - action: utter_mas_ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+stories:
+- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 2
+  steps:
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_RNA
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: modo_Contento
+    - action: utter_mas_ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 3
+  steps:
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_LD
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: modo_Contento
+    - action: utter_mas_ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+- story: Usuario si saluda y pide solo una consulta pero no existe 1
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - action: utter_Ofrecer_Ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_LD
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+- story: Usuario si saluda y pide solo una consulta pero no existe 2
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - action: utter_Ofrecer_Ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_RNA
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+- story: Usuario si saluda y pide solo una consulta pero no existe 3
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - action: utter_Ofrecer_Ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities:
+        - buscarinformacion: "Que es la inteligencia artificial"
+    - intent: modo_No_Acertivo
+    - action: utter_Descontento
+    - action: utter_menu
+    - intent: sobre_IA
+      entities:
+        - buscarinformacion: "Que son las neurales biologicas"
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+    - action: utter_Despedida
+
+
+
+    
