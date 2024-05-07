@@ -7,7 +7,7 @@ rules:
   - intent: Despedida
   - action: utter_Despedida
 
-- rule: Di 'Soy un bot' cuando te pregunten acerca de lo que eres
+- rule: Eres un bot
   steps:
   - intent: Eres_Bot
   - action: utter_iamabot
@@ -21,3 +21,23 @@ rules:
   steps:
     - intent: tu_funcion
     - action: utter_Funcion_Bot
+
+- rule: Biscarimagen
+  steps:
+  - intent: Solicitud_img
+  - action: Buscar_img
+
+- rule: Informacion sobre RNA
+  steps:
+  - intent: sobre_RNA
+  - action: uttter_menu_RNA
+
+- rule: Informacion sobre LD
+  steps:
+  - intent: sobre_LD
+  - action: uttter_menu_LD
+
+- rule: Informacion sobre IA
+  steps:
+  - intent: sobre_IA
+  - action: uttter_menu_IA
