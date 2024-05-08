@@ -47,6 +47,7 @@ nlu:
     - Eso mismo
     - Por favor
     - Afirmativo
+    - si
 
 - intent: Negacion
   examples: |
@@ -62,6 +63,9 @@ nlu:
     - No gracias
     - No es lo que busco
     - Negativo
+    - no
+    - creo que es todo
+    - no gracias
 
 - intent: modo_Acertivo
   examples: |
@@ -87,6 +91,10 @@ nlu:
     - No tienes algo mas?
     - Eso es todo?
     - No me sirve la informacion
+    - Tienes algo que pueda ayudarme?
+    - Entonces que sabes
+    - Eso es todo?
+    - Eso es todo
 
 - intent: Eres_Bot
   examples: |
@@ -100,30 +108,30 @@ nlu:
 
 - intent: Solicitud
   examples: |
-    - [necesito](informacion)
-    - Quiero informacion sobre el tema de [tema](informacion)
-    - Necesito informacion sobre el tema de [tema](informacion)
+    - [Logica difusa](informacion)
+    - Quiero informacion sobre el tema de [Redes neuronales aertificiales](informacion)
+    - Necesito informacion sobre el tema de [Neurales biologicos](informacion)
     - Que es [tema](informacion)
-    - Que es la [tema](informacion)
-    - Que es el [tema](informacion)
-    - Quiero que me digas que es [tema](informacion)
-    - Sabes que es [tema](informacion)
-    - Conoces acerca de [tema](informacion) y mandame [masejemplos](imagenes)
-    - Concepto de [tema](informacion)
-    - Dame el concepto de [tema](informacion)
+    - Que es la [Variable linguistica](informacion)
+  #   - Que es el [tema](informacion)
+  #   - Quiero que me digas que es [tema](informacion)
+  #   - Sabes que es [tema](informacion)
+  #   - Conoces acerca de [tema](informacion) y mandame [masejemplos](imagen)
+  #   - Concepto de [tema](informacion)
+  #   - Dame el concepto de [tema](informacion)
   
- - intent: Solicitud_img
+- intent: Solicitud_img
   examples: |
     - Me puedes dar mas ejemplos de [tema](imagen)
-    - Me puedes dar mas informacion de [tema](imagen))
-    - Quiero saber mas acerca de [tema](imagen))
-    - Que mas me puedes decir de [tema](imagen))
-    - Puedes darmame mas (imagen)
-    - Que mas sabes de [tema](imagen))
+    - Me puedes dar mas informacion de [tema](imagen)
+    - Quiero saber mas acerca de [tema](imagen)
+    - Que mas me puedes decir de [tema](imagen)
+    - Puedes darmame mas 
+    - Que mas sabes de [tema](imagen)
     - Cuentame un poco mas de (imagen)
 
 - intent: tu_funcion
-  examples:
+  examples: |
     - Para que eres?
     - Para que sirves?
     - Que es lo que haces?
@@ -133,44 +141,53 @@ nlu:
     - En que me puedes ayudar?
     - para que funcionas?
 
-- intent: sobre_RNA
+# - intent: sobre_RNA
+#   examples: |
+#     - RNA
+#     - Sobre Redes neuronales artificiales
+#     - Sobre redes neuronales
+#     - Sobre redes
+#     - Platicame sobre redes neuronales
+#     - rna
+#     - me interesa sobre redes neuronales
+#     - platicame sobre redes neuronales
+
+
+# - intent: sobre_LD
+#   examples: |
+#     - LD
+#     - Sobre Logica difusa
+#     - Sobre logica difusa
+#     - Sobre Logica difusa
+#     - Platicame logica difusa
+#     - ld
+#     - me interesa sobre logica difusa
+#     - platicame sobre logica difusa
+
+
+# - intent: sobre_IA
+#   examples: |
+#     - Que me puedes hablar de la IA
+#     - Que me puedes hablar de la ia
+#     - Que es IA
+#     - Que es ia
+#     - Habalde de la IA
+#     - Habalde de la ia
+#     - Que sabes de la IA
+#     - Que sabes de la ia
+#     - Que sabes acerca de IA
+#     - Que sabes acerca de la ia
+#     - Inteligencia Artificial
+#     - inteligencia artifical
+#     - Que sabes acerca de Inteligencia Artificial
+#     - Que sabes acerca de la inteligencia artificial
+
+
+- intent: Que_temas_tienes
   examples: |
-  - RNA
-  - Sobre Redes neuronales artificiales
-  - Sobre redes neuronales
-  - Sobre redes
-  - Platicame sobre redes neuronales
-  - rna
-  - me interesa sobre redes neuronales
-  - platicame sobre redes neuronales
-
-
-- intent: sobre_LD
-  - LD
-  - Sobre Logica difusa
-  - Sobre logica difusa
-  - Sobre Logica difusa
-  - Platicame logica difusa
-  - ld
-  - me interesa sobre logica difusa
-  - platicame sobre logica difusa
-
-
- - intent: sobre_IA
-  examples: |
-    - Que me puedes hablar de la IA
-    - Que me puedes hablar de la ia
-    - Que es IA
-    - Que es ia
-    - Habalde de la IA
-    - Habalde de la ia
-    - Que sabes de la IA
-    - Que sabes de la ia
-    - Que sabes acerca de IA
-    - Que sabes acerca de la ia
-    - Inteligencia Artificial
-    - inteligencia artifical
-    - Que sabes acerca de Inteligencia Artificial
-    - Que sabes acerca de la inteligencia artificial
-    
-  
+    - Que temas tienes?
+    - tienes algun menu
+    - menu
+    - tienes algun tipo de menu
+    - puedo ver que temas trabajas
+    - Nececito algo de ayuda 

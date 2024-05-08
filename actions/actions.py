@@ -7,7 +7,7 @@ import requests
 class Buscar(Action):
 
     def name(self) -> Text:
-        return "buscando"
+        return "Buscar"
     
     def run(self, dispatcher: CollectingDispatcher, 
             tracker: Tracker, 
@@ -56,7 +56,7 @@ class Buscar(Action):
 class Buscar_img(Action):
 
     def name(self) -> Text:
-        return "buscando"
+        return "Buscar_img"
     
     def run(self, dispatcher: CollectingDispatcher, 
             tracker: Tracker, 
@@ -101,7 +101,13 @@ class Buscar_img(Action):
         return []
 
 
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
 
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(template="utter_fallback")
+        return []
             
 
 

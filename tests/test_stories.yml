@@ -2,285 +2,156 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: Usuario no saluda y pide informacion pero no existe 1
-  steps:
-    - user: |
-        [necesito]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_RNA
-    - user: |
-        Quiero informacion sobre el tema de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-stories:
-- story: Usuario no saluda y pide informacion pero no existe 2
-  steps:
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_LD
-    - user: |
-        Que es la [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-stories:
-- story: Usuario no saluda y pide informacion pero no existe 3
-  steps:
-    - user: |
-        Dame el concepto de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_IA
-    - user: |
-        Que es la [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-stories:
-- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 1
-  steps:
-    - user: |
-        Conoces acerca de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_IA
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: modo_Contento
-    - action: utter_mas_ayuda
-    - intent: Afirmacion
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-stories:
-- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 2
-  steps:
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_RNA
-    - user: |
-        [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: modo_Contento
-    - action: utter_mas_ayuda
-    - intent: Afirmacion
-    - user: |
-        [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-- story: Usuario no saluda y pide informacion pero no existe, hace dos consultas 3
-  steps:
-    - user: |
-        Quiero informacion sobre el tema de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_RNA
-    - user: |
-        [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: modo_Contento
-    - action: utter_mas_ayuda
-    - intent: Afirmacion
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-- story: Usuario si saluda y pide solo una consulta pero no existe 1
-  steps:
-    - user: |
-      Buenos dias
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - action: utter_Ofrecer_Ayuda
-    - intent: Afirmacion
-    - user: |
-        Quiero informacion sobre el tema de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_LD
-    - user: |
-        [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-- story: Usuario si saluda y pide solo una consulta pero no existe 2
-  steps:
-    - user: |
-      Puedes ayudarme?
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - action: utter_Ofrecer_Ayuda
-    - intent: Afirmacion
-    - user: |
-        Conoces acerca de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_RNA
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-- story: Usuario si saluda y pide solo una consulta pero no existe 3
-  steps:
-    - user: |
-      Hey
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - action: utter_Ofrecer_Ayuda
-    - intent: Afirmacion
-    - user: |
-        Conoces acerca de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_No_Acertivo
-    - action: utter_Descontento
-    - action: utter_menu
-    - intent: sobre_IA
-    - user: |
-        Que es [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities:
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
-- story: Usuario si saluda y pide informacion e imagenes
-  steps:
-    - user: |
-      Que tal
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - action: utter_Ofrecer_Ayuda
-    - intent: Afirmacion
-    - user: |
-        Quiero informacion sobre el tema de [tema]{"entity": "informacion"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "informacion"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - user: |
-        Me puedes dar mas ejemplos de [tema]{"entity": "imagen"}
-      intent: Solicitud
-      entities: 
-        - buscarinformacion: "imagen"
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
-
 - story: Usuario saluda y se despide
   steps:
     - user: |
-      Hola
+       Hola
+      intent: Saludar
     - action: utter_Saludo
     - action: utter_Funcion_Bot
     - user: |
-      Adios
+        Adios
+      intent: Despedida
     - action: utter_Despedida
+
+- story: Solicitar informacion 1
+  steps:
+    - user: |
+        Que tal
+      intent: Saludar
+    - action: utter_Saludo
+    - user: |
+        Quiero informacion sobre el tema [Redes neuronales artificiales]{"entity": "informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        Perfecto
+      intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        no
+      intent: Negacion
+    - action: utter_Despedida
+
+- story: Solicitar historia sin saludar con exito
+  steps:
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        Exelente
+      intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        creo que es todo
+      intent: Negacion
+    - action: utter_Despedida
+
+
+- story: Solicitar un tema y tambien sus imagenes
+  steps:
+    - user: |
+        Hola que tal
+      intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        Que es la [Logica difusa]{"entity": informacion }
+      intent: Solicitud
+      entities:
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        Muy bien
+      intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - user: |
+        Me puedes dar mas ejemplos de [tema]{"entity":"imagen"}
+      intent: Solicitud_img
+      entities: 
+        - buscarimagen: "imagen"
+    - action: Buscar_img
+    - user: |
+        Sorprendente
+      intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - user: |
+        no
+      intent: Negacion
+    - action: utter_Despedida
+# - story: Usuario saluda y pide informacion
+#   steps:
+#     - user: |
+#         Hola que tal
+#       intent: Saludar
+#     - action: utter_Saludo
+#     - action: utter_Funcion_Bot
+#     - action: utter_menu
+#     - action: utter_Ofrecer_Ayuda
+#     - user: |
+#         si
+#       intent: Afirmacion
+#     - action: utter_dime
+#     - user: |
+#         LD
+#       intent: sobre_LD
+#     - action: utter_menu_LD
+#     - user: |
+#         [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - action: Buscar
+#     - user: |
+#         Perfecto
+#       intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_Ofrecer_Ayuda
+#     - user: |
+#         no gracias
+#       intent: Negacion
+#     - action: utter_Despedida 
+
+# - story: Usuario saluda y pide informacion, una es erronea y una consulta verdadera
+#   steps:
+#     - user: |
+#         que tal
+#       intent: Saludar
+#     - action: utter_Saludo
+#     - user: | 
+#         Que es [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - user: |
+#         No me ayuda
+#       intent: modo_No_Acertivo
+#     - action: utter_menu
+#     - user: |
+#         Que sabes de la IA
+#       intent: sobre_IA
+#     - action: utter_menu_IA
+#     - user: | 
+#         [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - user: |
+#         Genial
+#       intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_mas_ayuda
+#     - user: |
+#         no
+#       intent: Negacion
+#     - action: utter_Despedida

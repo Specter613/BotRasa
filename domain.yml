@@ -10,9 +10,11 @@ intents:
   - Eres_Bot
   - Solicitud
   - Solicitud_img
-  - sobre_RNA
-  - sobre_Ld
-  - sobre_IA
+  # - sobre_RNA
+  # - sobre_LD
+  # - sobre_IA
+  - Que_temas_tienes
+  - tu_funcion
 
 ## Variables para almacenar lo que el usuario va a pedir 
 entities:
@@ -39,20 +41,13 @@ slots:
     - type: from_entity
       entity: imagen
 
-slots: 
-  imagen:
-   type: text
-   influence_conversation: true
-   mappings:
-    - type: from_entity
-      entity: imagen
-
-
 responses:
   utter_Saludo:
-  - text: "Hola, como estas?"
-  - text: "Hola, como va todo?"
-  - text: "Hola, en que puedo ayudarte?"
+  - text: "Hola"
+  - text: "Que tal"
+  - text: "Hey"
+  - text: "Buenas"
+  - text: "Holaaaa"
 
   utter _Peticion:
   - text: "Claro enseguida"
@@ -66,11 +61,12 @@ responses:
           Link o videos de utilidad sobre este tema"
 
   utter_Ofrecer_Ayuda:
-  - text: "Te puedo ayudar en algo?"
-  - text: "Dime en que puedo ayudarte"
-  - text: "En que puedo ayudarte?"
+  - text: "Necesitas alguna consulta?"
+  - text: "Quieres hacer alguna busqueda?"
+  - text: "Quieres consultar algo?"
   - text: "Puedo ayudarte en algo"
   - text: "Necesitas algo?"
+  - text: "Necesitas algo mas"
 
   utter_Contento:
   - text: "Genial!"
@@ -101,15 +97,19 @@ responses:
 
 
   utter_iamabot:
-  - text: "Soy un bot hecho por rasa"
+  - text: "Soy un bot hecho en rasa por Daniel, Isidro y Alfredo"
 
-  utter_default:
+  utter_fallback:
   - text: Lo siento, no entendí lo que quisiste decir. ¿Podrías reformular tu pregunta?
 
   utter_menu:
-  - text: "Los principales temas que contiene mi base de datos son: "
+  - text: "Los principales temas que contiene mi base de datos son: 
+  \n1.-[IA] Explicacion sobre la IA o Inteligenicia Articial. 
+  \n2.-[LD] Informacion acerca sobre Logica Difusa. 
+  \n3.-[RNA] Informacion sobre las Redes Neuronales Artificiales.
+  \nPuedes teclear las siglas entre corchetes para abrir un submenu del tema que te interese"
   
-  uttter_menu_RNA:
+  utter_menu_RNA:
   - text: "Te puedo ofrecer informacion sobre: "
 
     
@@ -117,12 +117,20 @@ responses:
   - text: "Te puedo hablar sobre: "
   
   utter_menu_IA:
-  - text: "De lo que te puedo hablar acerca de este tema es: \n"
+  - text: "De lo que te puedo hablar acerca de este tema es: \n-Concepto de lo que es la IA o Ingteligencia Artificial. \n-Historia y evolucion sobre la IA. \n-Importancia y aplicaciones de la IA en la vida cotidiana. \n-Sistemas basados en reglas. \n-Aprendizaje automatico (Maching Learning). \n Informacion acerca de lo que es Deep Learning. \n-Algoritmos de IA comunes. \n-Vision por computadora. \n-Consideraciones Eticas en la IA. "
 
   utter_mas_ayuda:
   - text: "Necesitas algo mas"
   - text: "Puedo ayudarte con algo mas?"
   - text: "algo mas en lo que pueda ayudar?"
+
+  utter_dime:
+  - text: "Que necesitas?"
+  - text: "dime tu duda"
+  - text: "En que puedo ayudarte?"
+  - text: "te leo"
+  - text: "Dime"
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

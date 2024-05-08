@@ -1,5 +1,6 @@
 version: "3.1"
 
+# rules:
 rules:
 
 - rule: Di adios cuando el usuario te diga adios
@@ -13,31 +14,74 @@ rules:
   - action: utter_iamabot
 
 - rule: Buscarinformacion
-   steps:
+  steps:
    - intent: Solicitud
    - action: Buscar
 
-- rule: Di tu funcion
-  steps:
-    - intent: tu_funcion
-    - action: utter_Funcion_Bot
-
-- rule: Biscarimagen
+- rule: Buscarimagen
   steps:
   - intent: Solicitud_img
   - action: Buscar_img
 
-- rule: Informacion sobre RNA
-  steps:
-  - intent: sobre_RNA
-  - action: uttter_menu_RNA
+# - rule: Informacion sobre RNA
+#    steps:
+#    - user: |
+#       IA
+#    - action: utter_menu_RNA
 
-- rule: Informacion sobre LD
-  steps:
-  - intent: sobre_LD
-  - action: uttter_menu_LD
+# - rule: Informacion sobre LD
+#    steps:
+#    - user: |
+#       LD
+#    - action: utter_menu_LD
 
-- rule: Informacion sobre IA
-  steps:
-  - intent: sobre_IA
-  - action: uttter_menu_IA
+#  - rule: Informacion sobre IA
+#    steps:
+#    - user: |
+#       RNA
+#    - action: utter_menu_IA
+
+- rule: mostar menu
+  steps: 
+  - intent: Que_temas_tienes
+  - action: utter_menu
+
+# - rule: Di adios cuando el usuario te diga adios
+#   steps:
+#   - intent: Despedida
+#   - action: utter_Despedida
+
+# - rule: Eres un bot
+#   steps:
+#   - intent: Eres_Bot
+#   - action: utter_iamabot
+
+# - rule: Buscarinformacion
+#   steps:
+#    - intent: Solicitud
+#    - action: Buscar
+
+# - rule: Di tu funcion
+#   steps:
+#     - intent: tu_funcion
+#     - action: utter_Funcion_Bot
+
+# - rule: Biscarimagen
+#   steps:
+#   - intent: Solicitud_img
+#   - action: Buscar_img
+
+# - rule: Informacion sobre RNA
+#   steps:
+#   - intent: sobre_RNA
+#   - action: utter_menu_RNA
+
+# - rule: Informacion sobre LD
+#   steps:
+#   - intent: sobre_LD
+#   - action: utter_menu_LD
+
+# - rule: Informacion sobre IA
+#   steps:
+#   - intent: sobre_IA
+#   - action: utter_menu_IA
