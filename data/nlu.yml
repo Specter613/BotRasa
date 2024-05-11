@@ -1,6 +1,14 @@
 version: "3.1"
-
 nlu:
+- intent: Que_temas_tienes
+  examples: |
+    - Que temas tienes?
+    - tienes algun menu
+    - menu
+    - tienes algun tipo de menu
+    - puedo ver que temas trabajas
+    - Nececito algo de ayuda
+    - tendras algun menu
 - intent: Saludar
   examples: |
     - Hola
@@ -14,8 +22,8 @@ nlu:
     - Hey
     - Hola que tal
     - Oye
-
-
+    - hola
+    - que tal
 - intent: Despedida
   examples: |
     - Adios
@@ -30,8 +38,7 @@ nlu:
     - Bye
     - Hasta la próxima
     - Chau
-
-
+    - adios
 - intent: Afirmacion
   examples: |
     - Si
@@ -48,7 +55,6 @@ nlu:
     - Por favor
     - Afirmativo
     - si
-
 - intent: Negacion
   examples: |
     - No
@@ -66,7 +72,6 @@ nlu:
     - no
     - creo que es todo
     - no gracias
-
 - intent: modo_Acertivo
   examples: |
     - Perfecto
@@ -79,7 +84,7 @@ nlu:
     - Exelente
     - Super
     - Cool
-
+    - super
 - intent: modo_No_Acertivo
   examples: |
     - No me ayuda
@@ -93,9 +98,7 @@ nlu:
     - No me sirve la informacion
     - Tienes algo que pueda ayudarme?
     - Entonces que sabes
-    - Eso es todo?
     - Eso es todo
-
 - intent: Eres_Bot
   examples: |
     - Eres un bot?
@@ -105,7 +108,6 @@ nlu:
     - Que eres?
     - Quien eres?
     - Eres un bot o un humano?
-
 - intent: Solicitud
   examples: |
     - [Logica difusa](informacion)
@@ -113,23 +115,21 @@ nlu:
     - Necesito informacion sobre el tema de [Neurales biologicos](informacion)
     - Que es [tema](informacion)
     - Que es la [Variable linguistica](informacion)
-  #   - Que es el [tema](informacion)
-  #   - Quiero que me digas que es [tema](informacion)
-  #   - Sabes que es [tema](informacion)
-  #   - Conoces acerca de [tema](informacion) y mandame [masejemplos](imagen)
-  #   - Concepto de [tema](informacion)
-  #   - Dame el concepto de [tema](informacion)
-  
+    - [que es la](informacion) [logica difusa](informacion)
+    - que son las [neurales](informacion) biologicas
+    - [que es](informacion) [logica difusa](informacion)
+    - [que es](informacion) [logica difusa](informacion)
 - intent: Solicitud_img
   examples: |
     - Me puedes dar mas ejemplos de [tema](imagen)
     - Me puedes dar mas informacion de [tema](imagen)
     - Quiero saber mas acerca de [tema](imagen)
     - Que mas me puedes decir de [tema](imagen)
-    - Puedes darmame mas 
+    - Puedes darmame mas
     - Que mas sabes de [tema](imagen)
     - Cuentame un poco mas de (imagen)
-
+    - [cuentame](informacion) un poco mas de [logica difusa](informacion)
+    - [Cuentame](informacion) un poco mas de [logica difusa](informacion)
 - intent: tu_funcion
   examples: |
     - Para que eres?
@@ -140,54 +140,21 @@ nlu:
     - De que me sirves?
     - En que me puedes ayudar?
     - para que funcionas?
-
-# - intent: sobre_RNA
-#   examples: |
-#     - RNA
-#     - Sobre Redes neuronales artificiales
-#     - Sobre redes neuronales
-#     - Sobre redes
-#     - Platicame sobre redes neuronales
-#     - rna
-#     - me interesa sobre redes neuronales
-#     - platicame sobre redes neuronales
-
-
-# - intent: sobre_LD
-#   examples: |
-#     - LD
-#     - Sobre Logica difusa
-#     - Sobre logica difusa
-#     - Sobre Logica difusa
-#     - Platicame logica difusa
-#     - ld
-#     - me interesa sobre logica difusa
-#     - platicame sobre logica difusa
-
-
-# - intent: sobre_IA
-#   examples: |
-#     - Que me puedes hablar de la IA
-#     - Que me puedes hablar de la ia
-#     - Que es IA
-#     - Que es ia
-#     - Habalde de la IA
-#     - Habalde de la ia
-#     - Que sabes de la IA
-#     - Que sabes de la ia
-#     - Que sabes acerca de IA
-#     - Que sabes acerca de la ia
-#     - Inteligencia Artificial
-#     - inteligencia artifical
-#     - Que sabes acerca de Inteligencia Artificial
-#     - Que sabes acerca de la inteligencia artificial
-
-
-- intent: Que_temas_tienes
+- intent: menu_IA
   examples: |
-    - Que temas tienes?
-    - tienes algun menu
-    - menu
-    - tienes algun tipo de menu
-    - puedo ver que temas trabajas
-    - Nececito algo de ayuda 
+    - IA
+    - 1
+    - ia
+    - uno
+- intent: menu_LD
+  examples: |
+    - LD
+    - 2
+    - ld
+    - dos
+- intent: menu_RNA
+  examples: |
+    - RNA
+    - 3
+    - rna
+    - tres

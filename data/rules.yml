@@ -41,10 +41,10 @@ rules:
 #       RNA
 #    - action: utter_menu_IA
 
-- rule: mostar menu
-  steps: 
-  - intent: Que_temas_tienes
-  - action: utter_menu
+# - rule: mostar menu
+#   steps: 
+#   - intent: Que_temas_tienes
+#   - action: utter_menu
 
 # - rule: Di adios cuando el usuario te diga adios
 #   steps:

@@ -20,6 +20,7 @@ stories:
         Que tal
       intent: Saludar
     - action: utter_Saludo
+    - action: utter_Funcion_Bot
     - user: |
         Quiero informacion sobre el tema [Redes neuronales artificiales]{"entity": "informacion"}
       intent: Solicitud
@@ -89,6 +90,50 @@ stories:
         no
       intent: Negacion
     - action: utter_Despedida
+
+- story: Solicitar historia sin saludar 2
+  steps:
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        Si
+      intent: Afirmacion
+    - action: utter_Contento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        menu
+      intent: Que_temas_tienes
+    - action: utter_menu
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+
+- story: Solicitar historia sin saludar 3
+  steps:
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        no
+      intent: Negacion
+    - action: utter_Descontento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        tendras algun menu
+      intent: Que_temas_tienes
+    - action: utter_menu
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+
+  
 # - story: Usuario saluda y pide informacion
 #   steps:
 #     - user: |
