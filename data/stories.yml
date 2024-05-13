@@ -1,6 +1,7 @@
 version: "3.1"
 
 stories:
+<<<<<<< HEAD
 # - story: Usuario saluda y se despide
 #   steps:
 #     - intent: Saludar
@@ -72,10 +73,200 @@ stories:
 
 
 - story: Entrada
+=======
+- story: Usuario saluda y se despide
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+
+
+
+- story: Solicitar informacion y no la encuentra
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "cuanto es dos mas dos"
+    - action: Buscar
+
+
+- story: Solicitar informacion 1
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: tu_funcion
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la Logica Diffusa"
+    - action: Buscar
+
+
+- story: Solicitar informacion 2
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: tu_funcion
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la Logica Difusa"
+    - action: Buscar
+    - intent: Afirmacion
+    - action: utter_Contento
+
+
+- story: Solicitar informacion 3
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la Corriente"
+    - action: Buscar
+    - intent: modo_Acertivo
+    - action: utter_Contento
+
+- story: Solicitar informacion 4
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la Intensidad"
+    - action: Buscar
+    - intent: Negacion
+    - action: utter_Descontento
+
+
+- story: Solicitar informacion 5
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: tu_funcion
+    - action: utter_Funcion_Bot
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la ley de ohm"
+    - action: Buscar
+    - intent: Negacion
+    - action: utter_Descontento
+    - intent: Negacion
+    - action: utter_Despedida
+
+
+- story: Solicitar informacion 6
+  steps:
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es la ia"
+    - action: Buscar
+    - intent: Afirmacion
+    - action: utter_Contento
+    - intent: Que_temas_tienes
+    - action: utter_menu
+    - intent: menu_IA
+    - action: utter_menu_ia
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "cuanto es dos mas dos"
+    - action: Buscar
+
+- story: Solicitar informacion 7
+  steps:
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "cual es la raiz de 20"
+    - action: Buscar
+    - intent: Negacion
+    - action: utter_Descontento
+    - intent: Que_temas_tienes
+    - action: utter_menu
+    - intent: menu_IA
+    - action: utter_menu_ia
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "cuanto es dos mas dos"
+    - action: Buscar
+
+- story: Solicitar informacion 8
+  steps:
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es RNA"
+    - action: Buscar
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Afirmacion
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "cuanto es dos mas dos"
+    - action: Buscar
+
+- story: Solicitar informacion 9
+  steps:
+    - intent: Solicitud
+      entities: 
+       - buscarinformacion: "Que es RNA"
+    - action: Buscar
+    - intent: modo_Acertivo
+    - action: utter_Contento
+    - action: utter_mas_ayuda
+    - intent: Negacion
+
+
+- story: Solicitar menu 1
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Que_temas_tienes
+    - action: utter_menu
+    - intent: menu_IA
+    - action: utter_menu_ia
+
+- story: Solicitar menu 2
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Que_temas_tienes
+    - action: utter_menu
+    - intent: menu_LD
+    - action: utter_menu_ld
+
+
+- story: Solicitar menu 3
+  steps:
+    - intent: Saludar
+    - action: utter_Saludo
+    - action: utter_Funcion_Bot
+    - intent: Que_temas_tienes
+    - action: utter_menu
+    - intent: menu_RNA
+    - action: utter_menu_rna
+
+
+
+
+
+
+- story: interactive_story_1
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
   steps:
   - intent: Saludar
   - action: utter_Saludo
   - action: utter_Funcion_Bot
+<<<<<<< HEAD
 
 - story: MenuIA
   steps:
@@ -102,3 +293,50 @@ stories:
 
 
 
+=======
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menua_IA
+
+- story: interactive_story_1
+  steps:
+  - intent: Saludar
+  - action: utter_Saludo
+  - action: utter_Funcion_Bot
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_IA
+  - action: utter_menu_ia
+  - intent: Solicitud
+    entities:
+    - informacion: que es
+    - informacion: logica difusa
+  - slot_was_set:
+    - informacion: logica difusa
+  - action: Buscar
+  - intent: Solicitud_img
+    entities:
+    - informacion: Cuentame
+    - informacion: logica difusa
+  - slot_was_set:
+    - informacion: logica difusa
+  - action: Buscar_img
+  - intent: Negacion
+  - action: utter_Descontento
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_LD
+  - action: utter_menu_ld
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_RNA
+  - action: utter_menu_rna
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_LD
+  - action: utter_menu_ld
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_RNA
+  - action: utter_menu_rna
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9

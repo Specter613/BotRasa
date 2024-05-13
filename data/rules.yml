@@ -39,9 +39,16 @@ rules:
     - intent: Afirmativo
     - action: utter_dime
 
+<<<<<<< HEAD
 - rule: Negativo mas ayuda
   steps:
     - intent: Negacion
     - action: utter_Despedida
+=======
+# - rule: mostar menu
+#   steps: 
+#   - intent: Que_temas_tienes
+#   - action: utter_menu
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 
 

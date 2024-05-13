@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-imagen",
+      "2": "I-imagen",
+      "3": "L-imagen",
+      "4": "U-imagen",
+      "5": "B-informacion",
+      "6": "I-informacion",
+      "7": "L-informacion",
+      "8": "U-informacion",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-imagen": 1,
+      "I-imagen": 2,
+      "L-imagen": 3,
+      "U-imagen": 4,
+      "B-informacion": 5,
+      "I-informacion": 6,
+      "L-informacion": 7,
+      "U-informacion": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

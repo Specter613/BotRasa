@@ -20,6 +20,7 @@ stories:
         Que tal
       intent: Saludar
     - action: utter_Saludo
+    - action: utter_Funcion_Bot
     - user: |
         Quiero informacion sobre el tema [Redes neuronales artificiales]{"entity": "informacion"}
       intent: Solicitud
@@ -85,3 +86,116 @@ stories:
         no
       intent: Negacion
     - action: utter_Despedida
+<<<<<<< HEAD
+=======
+
+- story: Solicitar historia sin saludar 2
+  steps:
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        Si
+      intent: Afirmacion
+    - action: utter_Contento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        menu
+      intent: Que_temas_tienes
+    - action: utter_menu
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+
+- story: Solicitar historia sin saludar 3
+  steps:
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+      entities: 
+        - buscarinformacion: "informacion"
+    - action: Buscar
+    - user: |
+        no
+      intent: Negacion
+    - action: utter_Descontento
+    - action: utter_Ofrecer_Ayuda
+    - user: |
+        tendras algun menu
+      intent: Que_temas_tienes
+    - action: utter_menu
+    - user: |
+        Que es [tema]("entity":"informacion"}
+      intent: Solicitud
+
+  
+# - story: Usuario saluda y pide informacion
+#   steps:
+#     - user: |
+#         Hola que tal
+#       intent: Saludar
+#     - action: utter_Saludo
+#     - action: utter_Funcion_Bot
+#     - action: utter_menu
+#     - action: utter_Ofrecer_Ayuda
+#     - user: |
+#         si
+#       intent: Afirmacion
+#     - action: utter_dime
+#     - user: |
+#         LD
+#       intent: sobre_LD
+#     - action: utter_menu_LD
+#     - user: |
+#         [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - action: Buscar
+#     - user: |
+#         Perfecto
+#       intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_Ofrecer_Ayuda
+#     - user: |
+#         no gracias
+#       intent: Negacion
+#     - action: utter_Despedida 
+
+# - story: Usuario saluda y pide informacion, una es erronea y una consulta verdadera
+#   steps:
+#     - user: |
+#         que tal
+#       intent: Saludar
+#     - action: utter_Saludo
+#     - user: | 
+#         Que es [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - user: |
+#         No me ayuda
+#       intent: modo_No_Acertivo
+#     - action: utter_menu
+#     - user: |
+#         Que sabes de la IA
+#       intent: sobre_IA
+#     - action: utter_menu_IA
+#     - user: | 
+#         [necesito]{"entity": "informacion"}
+#       intent: Solicitud
+#       entities: 
+#         - buscarinformacion: "informacion"
+#     - user: |
+#         Genial
+#       intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_mas_ayuda
+#     - user: |
+#         no
+#       intent: Negacion
+#     - action: utter_Despedida
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9

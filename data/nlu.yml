@@ -1,5 +1,14 @@
 version: "3.1"
 nlu:
+- intent: Que_temas_tienes
+  examples: |
+    - Que temas tienes?
+    - tienes algun menu
+    - menu
+    - tienes algun tipo de menu
+    - puedo ver que temas trabajas
+    - Nececito algo de ayuda
+    - tendras algun menu
 - intent: Saludar
   examples: |
     - Hola
@@ -11,6 +20,10 @@ nlu:
     - Hola que tal
     - Oye
     - hola
+<<<<<<< HEAD
+=======
+    - que tal
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: Despedida
   examples: |
     - Adios
@@ -25,6 +38,26 @@ nlu:
     - Bye
     - Hasta la próxima
     - Chau
+<<<<<<< HEAD
+=======
+    - adios
+- intent: Afirmacion
+  examples: |
+    - Si
+    - Exacto
+    - Eso es
+    - Por supuesto que si
+    - Suena bien
+    - Correcto
+    - Es Correcto
+    - Okay
+    - Si claro
+    - Es correcto
+    - Eso mismo
+    - Por favor
+    - Afirmativo
+    - si
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: Negacion
   examples: |
     - No
@@ -42,6 +75,7 @@ nlu:
     - no
     - creo que es todo
     - no gracias
+<<<<<<< HEAD
 - intent: Afirmativo
   examples: |
     - si
@@ -50,6 +84,8 @@ nlu:
     - me encaria
     - yes
     - Yes
+=======
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: modo_Acertivo
   examples: |
     - Perfecto
@@ -62,6 +98,10 @@ nlu:
     - Exelente
     - Super
     - Cool
+<<<<<<< HEAD
+=======
+    - super
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: modo_No_Acertivo
   examples: |
     - No me ayuda
@@ -85,13 +125,17 @@ nlu:
     - Que eres?
     - Quien eres?
     - Eres un bot o un humano?
+<<<<<<< HEAD
     - de quien eres
+=======
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: Solicitud
   examples: |
     - [Logica difusa](informacion)
     - Quiero informacion sobre el tema de [Redes neuronales aertificiales](informacion)
     - Necesito informacion sobre el tema de [Neurales biologicos](informacion)
     - Que es [tema](informacion)
+<<<<<<< HEAD
     - Que es la [Prediccion y reconocimiento de patrones](informacion)
     - Que es el [Perceptron](informacion)
     - Quiero que me digas que es el [Algoritmo de un sistema ANFIS](informacion)
@@ -109,17 +153,32 @@ nlu:
     - Conoces acerca de [Modelos de neuronas](informacion)
     - sabes como es el [Entrenamiento de redes neuronales](informacion)
     
+=======
+    - Que es la [Variable linguistica](informacion)
+    - [que es la](informacion) [logica difusa](informacion)
+    - que son las [neurales](informacion) biologicas
+    - [que es](informacion) [logica difusa](informacion)
+    - [que es](informacion) [logica difusa](informacion)
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: Solicitud_img
   examples: |
     - Me puedes dar mas ejemplos de [tema](imagen)
     - Me puedes dar mas informacion de [tema](imagen)
     - Quiero saber mas acerca de [tema](imagen)
     - Que mas me puedes decir de [tema](imagen)
+<<<<<<< HEAD
     - Puedes darme mas
     - Que mas sabes de [tema](imagen)
     - Cuentame un poco mas de (imagen)
     - tienes algo mas de [tema](imagen)
     - 
+=======
+    - Puedes darmame mas
+    - Que mas sabes de [tema](imagen)
+    - Cuentame un poco mas de (imagen)
+    - [cuentame](informacion) un poco mas de [logica difusa](informacion)
+    - [Cuentame](informacion) un poco mas de [logica difusa](informacion)
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 - intent: tu_funcion
   examples: |
     - Para que eres?
@@ -130,6 +189,7 @@ nlu:
     - De que me sirves?
     - En que me puedes ayudar?
     - para que funcionas?
+<<<<<<< HEAD
 - intent: Que_temas_tienes
   examples: |
     - Que temas tienes?
@@ -141,6 +201,10 @@ nlu:
     - tendras algun menu
 - intent: menu_IA
   examples: |
+=======
+- intent: menu_IA
+  examples: |
+>>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
     - IA
     - 1
     - ia
