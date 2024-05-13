@@ -1,0 +1,50 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]": "Buscar_img",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"Buscar_img\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]": "utter_mas_ayuda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"Buscar_img\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"utter_mas_ayuda\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}]": "Buscar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"Buscar\"}, \"user\": {\"intent\": \"Solicitud\"}}]": "utter_mas_ayuda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"Buscar\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"utter_mas_ayuda\"}, \"user\": {\"intent\": \"Solicitud\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}]": "utter_Descontento",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}, {\"prev_action\": {\"action_name\": \"utter_Descontento\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Eres_Bot\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Eres_Bot\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"Eres_Bot\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}]": "utter_Contento",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}, {\"prev_action\": {\"action_name\": \"utter_Contento\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Negacion\"}}]": "utter_Despedida",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Negacion\"}}, {\"prev_action\": {\"action_name\": \"utter_Despedida\"}, \"user\": {\"intent\": \"Negacion\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Despedida\"}}]": "utter_Despedida",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Despedida\"}}, {\"prev_action\": {\"action_name\": \"utter_Despedida\"}, \"user\": {\"intent\": \"Despedida\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Afirmativo\"}}]": "utter_dime",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Afirmativo\"}}, {\"prev_action\": {\"action_name\": \"utter_dime\"}, \"user\": {\"intent\": \"Afirmativo\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"Buscar_img\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}, {\"prev_action\": {\"action_name\": \"utter_Descontento\"}, \"user\": {\"intent\": \"modo_No_Acertivo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Despedida\"}}, {\"prev_action\": {\"action_name\": \"utter_Despedida\"}, \"user\": {\"intent\": \"Despedida\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Negacion\"}}, {\"prev_action\": {\"action_name\": \"utter_Despedida\"}, \"user\": {\"intent\": \"Negacion\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Negacion\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Eres_Bot\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"Buscar_img\"}, \"user\": {\"intent\": \"Solicitud_img\"}}, {\"prev_action\": {\"action_name\": \"utter_mas_ayuda\"}, \"user\": {\"intent\": \"Solicitud_img\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Afirmativo\"}}, {\"prev_action\": {\"action_name\": \"utter_dime\"}, \"user\": {\"intent\": \"Afirmativo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Afirmativo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Eres_Bot\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"Eres_Bot\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"Buscar\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"utter_mas_ayuda\"}, \"user\": {\"intent\": \"Solicitud\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Solicitud\"}}, {\"prev_action\": {\"action_name\": \"Buscar\"}, \"user\": {\"intent\": \"Solicitud\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"Despedida\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}, {\"prev_action\": {\"action_name\": \"utter_Contento\"}, \"user\": {\"intent\": \"modo_Acertivo\"}}]"
+    ]
+  }
+}

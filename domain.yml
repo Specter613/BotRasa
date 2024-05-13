@@ -1,136 +1,125 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - Saludar
-  - Despedida
-  - Afirmacion
-  - Negacion
-  - modo_Acertivo
-  - modo_No_Acertivo
-  - Eres_Bot
-  - Solicitud
-  - Solicitud_img
-  # - sobre_RNA
-  # - sobre_LD
-  # - sobre_IA
-  - Que_temas_tienes
-  - tu_funcion
-
-## Variables para almacenar lo que el usuario va a pedir 
+- Afirmativo
+- Despedida
+- Eres_Bot
+- Negacion
+- Que_temas_tienes
+- Saludar
+- Solicitud
+- Solicitud_img
+- menu_IA
+- menu_LD
+- menu_RNA
+- modo_Acertivo
+- modo_No_Acertivo
+- tu_funcion
 entities:
-  - informacion
-  - imagen
-
-## Acciones que se programaran en el archivo py para conectar a una base de datos
-actions: 
-  - Buscar
-  - Buscar_img
-
-##Especificaciones para que el bot busque y se comunique con el servidos
-slots: 
+- imagen
+- informacion
+actions:
+- utter_menu_IA
+- utter_menu
+- utter_mas_ayuda
+- utter_Saludo
+- utter_dime
+- Buscar
+- utter_Funcion_Bot
+- utter_Despedida
+- utter_menu_RNA
+- utter_menu_LD
+- Buscar_img
+slots:
   informacion:
-   type: text
-   influence_conversation: true
-   mappings:
+    type: text
+    influence_conversation: true
+    mappings:
     - type: from_entity
       entity: informacion
   imagen:
-   type: text
-   influence_conversation: true
-   mappings:
+    type: text
+    influence_conversation: true
+    mappings:
     - type: from_entity
       entity: imagen
-
 responses:
   utter_Saludo:
-  - text: "Hola"
-  - text: "Que tal"
-  - text: "Hey"
-  - text: "Buenas"
-  - text: "Holaaaa"
-
-  utter _Peticion:
-  - text: "Claro enseguida"
-  - text: "Dame un momento"
-  - text: "Permiteme buscar"
-  - text: "Buscando informacion"
-
+  - text: Hola
+  - text: Que tal
+  - text: Hey
+  - text: Buenas
+  - text: Holaaaa
   utter_Funcion_Bot:
-  - text: "Soy una Sistema diseñado como apoyo para documentarte
-          acerca de la Inteligencia artificial, Puedo darte conceptos, 
-          Link o videos de utilidad sobre este tema"
-
+  - text: Soy una Sistema diseñado como apoyo para documentarteacerca de la Inteligencia artificial, Puedo darte conceptos, Link o videos de utilidad sobre este tema
   utter_Ofrecer_Ayuda:
-  - text: "Necesitas alguna consulta?"
-  - text: "Quieres hacer alguna busqueda?"
-  - text: "Quieres consultar algo?"
-  - text: "Puedo ayudarte en algo"
-  - text: "Necesitas algo?"
-  - text: "Necesitas algo mas"
-
+  - text: Necesitas alguna consulta?
+  - text: Quieres hacer alguna busqueda?
+  - text: Quieres consultar algo?
+  - text: Puedo ayudarte en algo
+  - text: Necesitas algo?
+  - text: Necesitas algo mas
   utter_Contento:
-  - text: "Genial!"
-  - text: "Me alegro que te sirva"
-  - text: "Me alegra saber eso"
-  - text: "Para eso estoy yo, me gusta ayudar"
-  - text: "Exelente, gracias"
-  - text: "Eso es exelente"
-  - text: "Super!"
-  - text: "Grandioso"
-
+  - text: Genial!
+  - text: Me alegro que te sirva
+  - text: Me alegra saber eso
+  - text: Para eso estoy yo, me gusta ayudar
+  - text: Exelente, gracias
+  - text: Eso es exelente
+  - text: Super!
+  - text: Grandioso
   utter_Descontento:
-  - text: "Lamento escuchar eso"
-  - text: "Entiendo"
-  - text: ":("
-  - text: "Siento escuchar eso mis creadores estaran al tanto"
-  - text: "Lo siento por eso"
-  - text: "Pido perdon :("
-
+  - text: Lamento escuchar eso
+  - text: Entiendo
+  - text: :(
+  - text: Siento escuchar eso mis creadores estaran al tanto
+  - text: Lo siento por eso
+  - text: Pido perdon :(
   utter_Despedida:
-  - text: "Adios"
-  - text: "Un placer ayudarte"
-  - text: "Regrasa pronto"
-  - text: "Si tienes dudas escribeme"
-  - text: "Encantado de haberte ayudado"
-  - text: "Vuelve pronto"
-  - text: "Hasta luego, Cuidate!"
-
-
+  - text: Adios
+  - text: Un placer ayudarte
+  - text: Regrasa pronto
+  - text: Si tienes dudas escribeme
+  - text: Encantado de haberte ayudado
+  - text: Vuelve pronto
+  - text: Hasta luego, Cuidate!
   utter_iamabot:
-  - text: "Soy un bot hecho en rasa por Daniel, Isidro y Alfredo"
-
-  utter_fallback:
+  - text: Soy un bot hecho en rasa por Daniel, Isidro y Alfredo
+  utter_default:
   - text: Lo siento, no entendí lo que quisiste decir. ¿Podrías reformular tu pregunta?
-
+  - text: Lo siento no estoy diseñado para responder eso:(, no entendi , o a lo mejor esta mal escrito
   utter_menu:
-  - text: "Los principales temas que contiene mi base de datos son: 
-  \n1.-[IA] Explicacion sobre la IA o Inteligenicia Articial. 
-  \n2.-[LD] Informacion acerca sobre Logica Difusa. 
-  \n3.-[RNA] Informacion sobre las Redes Neuronales Artificiales.
-  \nPuedes teclear las siglas entre corchetes para abrir un submenu del tema que te interese"
-  
+  - text: |-
+      Los principales temas que contiene mi base de datos son: 
+      1.-[IA] Explicacion sobre la IA o Inteligenicia Articial. 
+      2.-[LD] Informacion acerca sobre Logica Difusa. 
+      3.-[RNA] Informacion sobre las Redes Neuronales Artificiales. 
+      Puedes teclear las siglas entre corchetes para abrir un submenu del tema que te interese
   utter_menu_RNA:
-  - text: "Te puedo ofrecer informacion sobre: "
-
-    
+  - text: 'Te puedo ofrecer informacion sobre: '
   utter_menu_LD:
-  - text: "Te puedo hablar sobre: "
-  
+  - text: 'Te puedo hablar sobre: '
   utter_menu_IA:
-  - text: "De lo que te puedo hablar acerca de este tema es: \n-Concepto de lo que es la IA o Ingteligencia Artificial. \n-Historia y evolucion sobre la IA. \n-Importancia y aplicaciones de la IA en la vida cotidiana. \n-Sistemas basados en reglas. \n-Aprendizaje automatico (Maching Learning). \n Informacion acerca de lo que es Deep Learning. \n-Algoritmos de IA comunes. \n-Vision por computadora. \n-Consideraciones Eticas en la IA. "
-
+  - text: |-
+      De lo que te puedo hablar acerca de este tema es: 
+      -Concepto de lo que es la IA o Ingteligencia Artificial. 
+      -Historia y evolucion sobre la IA. 
+      -Importancia y aplicaciones de la IA en la vida cotidiana. 
+      -Sistemas basados en reglas. 
+      -Aprendizaje automatico (Maching Learning). 
+       Informacion acerca de lo que es Deep Learning. 
+      -Algoritmos de IA comunes. 
+      -Vision por computadora. 
+      -Consideraciones Eticas en la IA. 
   utter_mas_ayuda:
-  - text: "Necesitas algo mas"
-  - text: "Puedo ayudarte con algo mas?"
-  - text: "algo mas en lo que pueda ayudar?"
-
+  - text: Necesitas algo mas
+  - text: Puedo ayudarte con algo mas?
+  - text: algo mas en lo que pueda ayudar?
   utter_dime:
-  - text: "Que necesitas?"
-  - text: "dime tu duda"
-  - text: "En que puedo ayudarte?"
-  - text: "te leo"
-  - text: "Dime"
-  
+  - text: Que necesitas?
+  - text: dime tu duda
+  - text: En que puedo ayudarte?
+  - text: te leo
+  - text: Dime
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

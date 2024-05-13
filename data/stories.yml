@@ -1,54 +1,52 @@
 version: "3.1"
 
 stories:
-- story: Usuario saluda y se despide
-  steps:
-    - intent: Saludar
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - intent: Despedida
-    - action: utter_Despedida
+# - story: Usuario saluda y se despide
+#   steps:
+#     - intent: Saludar
+#     - action: utter_Saludo
+#     - action: utter_Funcion_Bot
+#     - intent: Despedida
+#     - action: utter_Despedida
 
-- story: Solicitar informacion 1
-  steps:
-    - intent: Saludar
-    - action: utter_Saludo
-    - intent: Solicitud
-    - action: Buscar
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_Ofrecer_Ayuda
-    - intent: Negacion
-    - action: utter_Despedida
+# - story: Solicitar informacion 1
+#   steps:
+#     - intent: Saludar
+#     - action: utter_Saludo
+#     - intent: Solicitud
+#     - action: Buscar
+#     - intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_Ofrecer_Ayuda
+#     - intent: Negacion
+#     - action: utter_Despedida
 
-- story: Solicitar historia sin saludar con exito
-  steps:
-    - intent: Solicitud
-    - action: Buscar
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_Ofrecer_Ayuda
-    - intent: Negacion
-    - action: utter_Despedida
+# - story: Solicitar historia sin saludar con exito
+#   steps:
+#     - intent: Solicitud
+#     - action: Buscar
+#     - intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_Ofrecer_Ayuda
+#     - intent: Negacion
+#     - action: utter_Despedida
 
-- story: Solicitar un tema y tambien sus imagenes
-  steps:
-    - intent: Saludar
-    - action: utter_Saludo
-    - action: utter_Funcion_Bot
-    - action: utter_Ofrecer_Ayuda
-    - intent: Solicitud
-    - action: Buscar
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Solicitud_img
-    - action: Buscar_img
-    - intent: modo_Acertivo
-    - action: utter_Contento
-    - action: utter_mas_ayuda
-    - intent: Negacion
-    - action: utter_Despedida
+# - story: Solicitar un tema y tambien sus imagenes
+#   steps:
+#     - intent: Saludar
+#     - action: utter_Saludo
+#     - action: utter_Funcion_Bot
+#     - action: utter_Ofrecer_Ayuda
+#     - intent: Solicitud
+#     - action: Buscar
+#     - action: utter_mas_ayuda
+#     - intent: Solicitud_img
+#     - action: Buscar_img
+#     - intent: modo_Acertivo
+#     - action: utter_Contento
+#     - action: utter_mas_ayuda
+#     - intent: Negacion
+#     - action: utter_Despedida
   
   
 # - story: Usuario saluda y pide informacion
@@ -71,4 +69,36 @@ stories:
 #     - action: utter_Ofrecer_Ayuda
 #     - intent: Negacion
 #     - action: utter_Despedida
+
+
+- story: Entrada
+  steps:
+  - intent: Saludar
+  - action: utter_Saludo
+  - action: utter_Funcion_Bot
+
+- story: MenuIA
+  steps:
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_IA
+  - action: utter_menu_IA
+
+- story: MenuLD
+  steps:
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_LD
+  - action: utter_menu_LD
+
+- story: MenuRNA
+  steps:
+  - intent: Que_temas_tienes
+  - action: utter_menu
+  - intent: menu_RNA
+  - action: utter_menu_RNA
+
+
+
+
 
