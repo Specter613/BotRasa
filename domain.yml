@@ -1,7 +1,5 @@
 version: '3.1'
-<<<<<<< HEAD
 intents:
-- Afirmativo
 - Despedida
 - Eres_Bot
 - Negacion
@@ -15,6 +13,7 @@ intents:
 - modo_Acertivo
 - modo_No_Acertivo
 - tu_funcion
+- Afirmativo
 entities:
 - imagen
 - informacion
@@ -69,12 +68,12 @@ responses:
   - text: Super!
   - text: Grandioso
   utter_Descontento:
-  - text: Lamento escuchar eso
-  - text: Entiendo
-  - text: :(
-  - text: Siento escuchar eso mis creadores estaran al tanto
-  - text: Lo siento por eso
-  - text: Pido perdon :(
+  - text: Lamento escuchar eso, puedo tratar de ayudarte en algo mas?
+  - text: Entiendo, si necesitas algo mas aqui estoy
+  - text: :( , dime con que otra cosa podria ayudar
+  - text: Siento escuchar eso mis creadores estaran al tanto, necesitas alguna cosa mas?
+  - text: Lo siento por eso, dime si necesitas algo mas
+  - text: Pido perdon :( , necesitas alguna otra cosa?
   utter_Despedida:
   - text: Adios
   - text: Un placer ayudarte
@@ -96,21 +95,65 @@ responses:
       3.-[RNA] Informacion sobre las Redes Neuronales Artificiales. 
       Puedes teclear las siglas entre corchetes para abrir un submenu del tema que te interese
   utter_menu_RNA:
-  - text: 'Te puedo ofrecer informacion sobre: '
+  - text: |- 
+     Te puedo ofrecer informacion sobre
+     -Redes neurales biologicas
+     -Modelos de neuronas
+     -Funciones de activacion
+     -Funcion de Gauss
+     -Perceptron
+     -Redes multicapa
+     -Redes de retropropagacion
+     -Redes de una capa
+     -Entrenamiento de redes neuronales
+     -Filtros adaptativos digitales
+     -Red Instar
+     -Redes Recurrentes
+     -Prediccion y reconocimiento de patrones
+     -Algoritmo de un sistema ANFIS
+     -Red Hopfield
+     -Fusificacion
+     -Mapas de Autorganizacion
+     -Redes ANFIS
+     -Perceptron multicapa
+     -Redes Autoorganizables
   utter_menu_LD:
-  - text: 'Te puedo hablar sobre: '
+  - text: |-
+      Te puedo hablar sobre:
+      -Logica difusa
+      -controlador difuso clasico
+      -Aplicaciones de la logica difusa
+      -sistema de control en lazo abierto
+      -sistema de control en lazo cerrado
+      -logica booleana
+      -logica simbolica
+      -reglas difusas
+      -controladores difusos
+      -Como funciona un controlador difuso
+      -Interfaz de difusificacion
+      -funciones de membresia
+      -controlador con base en Mamdani
+      -controladores P
+      -controladores PD
+      -controladores PI
+      -controlador PID
+      -agrupamientos difusos
+      -algoritmo del razonamiento
   utter_menu_IA:
   - text: |-
       De lo que te puedo hablar acerca de este tema es: 
-      -Concepto de lo que es la IA o Ingteligencia Artificial. 
-      -Historia y evolucion sobre la IA. 
-      -Importancia y aplicaciones de la IA en la vida cotidiana. 
-      -Sistemas basados en reglas. 
-      -Aprendizaje automatico (Maching Learning). 
-       Informacion acerca de lo que es Deep Learning. 
-      -Algoritmos de IA comunes. 
-      -Vision por computadora. 
-      -Consideraciones Eticas en la IA. 
+      - Concepto de lo que es la Ingteligencia Artificial
+      - Historia sobre la IA  
+      - Sistemas basados en reglas 
+      - Aprendizaje automatico (Maching Learning)
+      - Informacion acerca de lo que es Deep Learning
+      - Algoritmos de IA comunes 
+      - Vision por computadora
+      - Consideraciones Eticas en la IA
+      - Robotica
+      - Sitemas Expertos
+      - Chatbots y Asistentes Virtuales
+
   utter_mas_ayuda:
   - text: Necesitas algo mas
   - text: Puedo ayudarte con algo mas?
@@ -121,113 +164,7 @@ responses:
   - text: En que puedo ayudarte?
   - text: te leo
   - text: Dime
-=======
->>>>>>> d4a6c160e26ede2f3c4900267d55d489959b12a9
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-intents:
-- Afirmacion
-- Despedida
-- Eres_Bot
-- Negacion
-- Que_temas_tienes
-- Saludar
-- Solicitud
-- Solicitud_img
-- menu_IA
-- menu_LD
-- menu_RNA
-- modo_Acertivo
-- modo_No_Acertivo
-- tu_funcion
-entities:
-- informacion
-- imagen
-actions:
-- Buscar
-- utter_menu_ld
-- utter_Funcion_Bot
-- utter_menu
-- utter_menu_ia
-- utter_Saludo
-- Buscar_img
-- utter_Descontento
-- utter_menu_rna
-- utter_Despedida
-- utter_mas_ayuda
-- utter_Contento
-slots:
-  informacion:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: informacion
-  imagen:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: imagen
-responses:
-  utter_Saludo:
-  - text: Hola
-  - text: Que tal
-  - text: Hey
-  - text: Buenas
-  - text: Holaaaa
-  utter _Peticion:
-  - text: Claro enseguida
-  - text: Dame un momento
-  - text: Permiteme buscar
-  - text: Buscando informacion
-  utter_Funcion_Bot:
-  - text: Soy una Sistema diseñado como apoyo par documentarte acerca de la Inteligencia artificial, Puedo conceptos, Link o videos de utilidad sobre es tema
-  utter_Ofrecer_Ayuda:
-  - text: Necesitas alguna consulta?
-  - text: Quieres hacer alguna busqueda?
-  - text: Quieres consultar algo?
-  - text: Puedo ayudarte en algo
-  - text: Necesitas algo?
-  - text: Necesitas algo mas
-  utter_Contento:
-  - text: Genial!
-  - text: Me alegro que te sirva
-  - text: Me alegra saber eso
-  - text: Para eso estoy yo, me gusta ayudar
-  - text: Exelente, gracias
-  - text: Eso es exelente
-  - text: Super!
-  - text: Grandioso
-  utter_mas_ayuda:
-  - text: Necesitas algo mas
-  - text: Puedo ayudarte con algo mas?
-  - text: algo mas en lo que pueda ayudar?
-  utter_Descontento:
-  - text: Lamento escuchar eso
-  - text: Entiendo
-  - text: :(
-  - text: Siento escuchar eso mis creadores estaran al tanto
-  - text: Lo siento por eso
-  - text: Pido perdon :(
-  utter_Despedida:
-  - text: Adios
-  - text: Un placer ayudarte
-  - text: Regrasa pronto
-  - text: Si tienes dudas escribeme
-  - text: Encantado de haberte ayudado
-  - text: Vuelve pronto
-  - text: Hasta luego, Cuidate!
-  utter_iamabot:
-  - text: Soy un bot hecho en rasa por Daniel, Isidro y Alfredo
-  utter_menu:
-  - text: 'Los principales temas que contiene mi base de datos son:  1.-[IA] Explicacion sobre la IA o Inteligenicia Articial. 2.-[LD] Informacion acerca sobre Logica Difusa. 3.-[RNA] Informacion sobre las Redes Neuronales Artificiales. Puedes teclear las siglas entre corchetes o el numero del tema para abrir un submenu del tema que te interese'
-  utter_fallback:
-  - text: Lo siento no estoy diseñado para responder eso:( no entendi , o a lo mejor esta mal escrito
-  utter_menu_ia:
-  - text: El contenido para este tema es.. 1.1- Que es la IA. 1.2- Breve historia de la IA. 1.3- Sistema basados en reglas. 1.4- Machine learningn. 1.5- Deep Learning. 1.6- Algoritmos de IA mas comunes. 1.7- Visión por Computadora. 1.8- Robótica.
-  utter_menu_ld:
-  - text: MENU LA
-  utter_menu_rna:
-  - text: MENU RNA
+

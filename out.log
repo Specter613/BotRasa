@@ -1,0 +1,3 @@
+2024-05-19 12:33:07,719 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2024-05-19 12:33:08,098 [INFO ]  Loading model models\20240519-120823-blistering-shader.tar.gz...
+2024-05-19 12:33:41,205 [INFO ]  Rasa server is up and running.

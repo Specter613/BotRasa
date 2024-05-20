@@ -4,6 +4,8 @@ from rasa_sdk.executor import CollectingDispatcher
 import json
 import requests
 import urllib3
+from flask import Flask, request
+import telegram
 
 class Buscar(Action):
 
@@ -39,7 +41,7 @@ class Buscar(Action):
                 #AQUI SE DECLARAN LAS COLUMNSA DE NUESTRA BASE DE DATOS PARA ACCEDER A ELLAS COMO SI FUERAN MATRICES
 
                 conceptobreve = respuesta_json2[0]["Conceptobreve"]     
-                linkPag = respuesta_json2[0]["Linkpagina"]
+                linkPag = respuesta_json2[0]["LinkPagina"]
 
                 #ESTA ES LA SEGUNDA SINTAXIS PARA DECLARAR LAS COLUMNAS, MUY IMPORTANTE ESTA SINTAXIS YA QUE SIN ELLA NO SE DELCARAN LAS ANTERIORES
 
@@ -100,9 +102,8 @@ class Buscar(Action):
                 else:
                     response.raise_for_status()
             else:
-                dispatcher.utter_message(text="Lo siento al parecer no tengo informacion sobre eso")
-                dispatcher.utter_message(text="Lamento decirte que no tengo esa informacion")
-
+                dispatcher.utter_message(text="Al parecer no cuento con mas informacion sobre el tema")
+                
             return []
 
 
@@ -114,5 +115,4 @@ class ActionDefaultFallback(Action):
         dispatcher.utter_message(template="utter_fallback")
         return []
             
-
 
